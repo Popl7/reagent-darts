@@ -1,5 +1,16 @@
 # reagent-darts
 
+local-storage
+
+start game
+save game
+resume game
+stop game
+reset
+player names
+highscores
+
+
 ## Run in development mode
 
 - Start a repl with `lein repl`

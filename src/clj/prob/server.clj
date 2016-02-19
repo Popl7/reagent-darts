@@ -8,14 +8,19 @@
 
 (def server (atom nil))
 
+(defn highscores []
+  [
+   ["steven" 10]
+   ["davide" 8]])
 
 (defroutes routes
   (GET "/" req (response/resource-response "index.html" {:root "public"}))
   (GET "/load-stuff" [] {:status 200
                          :body {:something "here2"}})
+  (GET "/highscores" [] {:status 200
+                         :body (highscores)})
   (route/resources "/")
   (route/not-found "Not found"))
-
 
 (def app
   (-> routes

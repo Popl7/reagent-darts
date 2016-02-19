@@ -7,7 +7,11 @@
                  [org.clojure/clojurescript "1.7.170"]
                  [ring "1.4.0"]
                  [compojure "1.4.0"]
-                 [ring-transit "0.1.4"]]
+                 [ring-transit "0.1.4"]
+                 [cljs-ajax "0.5.1"]
+                 [reagent "0.5.1"]
+                 [reagent-utils "0.1.4"]
+                 [secretary "1.2.3"]]
 
   :plugins [[lein-cljsbuild "1.1.1"]]
 
@@ -16,9 +20,7 @@
   :resource-paths ["resources"]
 
   :profiles {:dev {:dependencies [[com.cemerick/piggieback "0.2.1"]
-                                  [figwheel-sidecar "0.5.0-2"]
-                                  [cljs-ajax "0.5.1"]
-                                  [reagent "0.5.1"]]
+                                  [figwheel-sidecar "0.5.0-2"]]
                    :source-paths ["dev/clj" "dev/cljs"]
                    :resource-paths ["dev/resources"]}
              :uberjar {:main prob.core
